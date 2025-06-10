@@ -1,0 +1,120 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 15% 8%;
+  --foreground: 210 40% 98%;
+  --card: 220 15% 10%;
+  --card-foreground: 210 40% 98%;
+  --popover: 220 15% 10%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 195 100% 50%;
+  --primary-foreground: 220 15% 8%;
+  --secondary: 84 100% 50%;
+  --secondary-foreground: 220 15% 8%;
+  --muted: 220 15% 15%;
+  --muted-foreground: 210 40% 60%;
+  --accent: 45 100% 60%;
+  --accent-foreground: 220 15% 8%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 220 15% 20%;
+  --input: 220 15% 20%;
+  --ring: 195 100% 50%;
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+  overflow-x: hidden;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, 
+    rgba(0, 191, 255, 0.1) 0%, 
+    rgba(50, 205, 50, 0.1) 50%, 
+    rgba(255, 215, 0, 0.1) 100%);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-glow {
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.3),
+              0 0 40px rgba(0, 191, 255, 0.2),
+              0 0 60px rgba(0, 191, 255, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #00bfff 0%, #32cd32 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from {
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.8);
+  }
+}
+
+.team-card-hover {
+  transition: all 0.3s ease;
+}
+
+.team-card-hover:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 191, 255, 0.2);
+}
+
+.social-feed {
+  background: linear-gradient(145deg, rgba(0, 191, 255, 0.05), rgba(50, 205, 50, 0.05));
+}
+
+.news-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.news-card:hover {
+  background: linear-gradient(145deg, rgba(0, 191, 255, 0.1), rgba(50, 205, 50, 0.05));
+  border-color: rgba(0, 191, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
