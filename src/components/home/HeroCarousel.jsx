@@ -13,7 +13,7 @@ const heroSlidesData = [
     image: "https://images.unsplash.com/photo-1668370255521-ba85b01de6ac"
   },
   {
-    title: "Excelencia Deportiva",
+    title: "Excelencia Deportiva total",
     subtitle: "Cada partido es una historia",
     description: "Vive la emoción del fútbol de élite con nosotros",
     cta: "Próximos Partidos",
